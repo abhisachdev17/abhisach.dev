@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhi Sachdev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Fluid Simulation Background -->
+  <canvas id="fluid-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav class="nav-glass">
+    <div class="nav-content">
+      <div class="nav-left">
+        <a href="#hero" class="nav-logo" aria-label="Home">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/>
+          </svg>
+        </a>
+        <a href="#about" class="nav-link">Experience</a>
+      </div>
+      <div class="nav-right">
+        <a href="assets/Abhi Sachdev.pdf" download class="nav-link nav-resume">Resume</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1" x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1" y1="12" x2="3" y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="glass-panel hero-card">
+        <div class="hero-photo">
+          <img src="assets/abhi.jpeg" alt="Abhi Sachdev" class="profile-photo">
+        </div>
+        <div class="hero-content">
+          <h1 class="hero-name">Abhi Sachdev</h1>
+          <p class="hero-tagline">Software Engineer · Building systems that scale</p>
+          <div class="social-links">
+            <a href="https://github.com/abhisachdev17" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/abhi-sachdev" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="mailto:sachdevabhi74@gmail.com" class="social-icon" aria-label="Email">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="about" class="section">
+      <div class="glass-panel">
+        <h2 class="section-title">Experience</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>Software Engineer</h3>
+                <span class="timeline-company">MongoDB</span>
+              </div>
+              <span class="timeline-date">Nov 2025 — Present</span>
+              <p class="timeline-desc">AI code generation.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header-stacked">
+                <div class="timeline-role">
+                  <h3>Software Development Engineer II</h3>
+                  <span class="timeline-date">July 2024 — Nov 2025</span>
+                </div>
+                <div class="timeline-role">
+                  <h3>Software Development Engineer I</h3>
+                  <span class="timeline-date">March 2023 — July 2024</span>
+                </div>
+                <span class="timeline-company">Amazon Web Services</span>
+              </div>
+              <p class="timeline-desc">Built the Storage Service powering S3 Express.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>Software Development Engineer Intern</h3>
+                <span class="timeline-company">Amazon Web Services</span>
+              </div>
+              <span class="timeline-date">May 2022 — Aug 2022</span>
+              <p class="timeline-desc">Profiling Rust services.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>Software Developer Intern</h3>
+                <span class="timeline-company">Google</span>
+              </div>
+              <span class="timeline-date">Aug 2021 — Dec 2021</span>
+              <p class="timeline-desc">Visualizing Google Maps geometry.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content glass-card">
+              <div class="timeline-header">
+                <h3>Software Development Engineer Intern</h3>
+                <span class="timeline-company">Amazon Web Services</span>
+              </div>
+              <span class="timeline-date">May 2021 — Aug 2021</span>
+              <p class="timeline-desc">Detecting shard corruptions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="stack" class="section">
+      <div class="glass-panel">
+        <h2 class="section-title">Tech Stack</h2>
+        <div class="stack-categories">
+          <div class="stack-category">
+            <h3 class="category-label">Languages</h3>
+            <div class="stack-grid">
+              <div class="stack-tile">
+                <span class="stack-name">Rust</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">C/C++</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">Python</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">Java</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">JavaScript</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">SQL</span>
+              </div>
+            </div>
+          </div>
+          <div class="stack-category">
+            <h3 class="category-label">Technologies</h3>
+            <div class="stack-grid">
+              <div class="stack-tile">
+                <span class="stack-name">AWS</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">Tokio</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">Axum</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">Docker</span>
+              </div>
+              <div class="stack-tile">
+                <span class="stack-name">OpenGL</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Off The Clock Section -->
+    <section id="hobbies" class="section">
+      <div class="glass-panel">
+        <h2 class="section-title">Off The Clock</h2>
+        <div class="hobbies-grid">
+          <div class="hobby-card">
+            <div class="hobby-image">
+              <img src="assets/snowboarding.jpeg" alt="Snowboarding" loading="lazy">
+            </div>
+            <span class="hobby-label">I snowboard</span>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-image">
+              <img src="assets/hiking.jpeg" alt="Hiking" loading="lazy">
+            </div>
+            <span class="hobby-label">I hike</span>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-image">
+              <img src="assets/surfing.jpeg" alt="Surfing" loading="lazy">
+            </div>
+            <span class="hobby-label">I surf sometimes</span>
+          </div>
+          <div class="hobby-card">
+            <div class="hobby-image">
+              <img src="assets/run.jpeg" alt="Running" loading="lazy">
+            </div>
+            <span class="hobby-label">I try to run</span>
+          </div>
+        </div>
+        <div class="currently-listening">
+          <svg class="spotify-icon" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/>
+          </svg>
+          <span class="listening-label">Currently on repeat</span>
+          <span class="listening-track">Eric Prydz</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="glass-panel footer-panel">
+        <p>&copy;2026 Abhi Sachdev</p>
+        <a href="https://github.com/abhisachdev17/abhisach.dev" target="_blank" rel="noopener" class="source-link">Source</a>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Fluid Simulation Shaders -->
+  <script type="x-shader/x-vertex" id="vertexShader">
+    precision mediump float;
+    attribute vec2 vertPosition;
+    varying vec2 texelCoord;
+    varying vec2 left;
+    varying vec2 right;
+    varying vec2 top;
+    varying vec2 bottom;
+    uniform vec2 texelSize;
+
+    void main() {
+      texelCoord = vertPosition * 0.5 + 0.5;
+      left = texelCoord - vec2(texelSize.x, 0.0);
+      right = texelCoord + vec2(texelSize.x, 0.0);
+      top = texelCoord + vec2(0.0, texelSize.y);
+      bottom = texelCoord - vec2(0.0, texelSize.y);
+      gl_Position = vec4(vertPosition, 0.0, 1.0);
+    }
+  </script>
+
+  <script type="x-shader/x-fragment" id="fragmentShader">
+    precision mediump float;
+    precision mediump sampler2D;
+    varying vec2 texelCoord;
+    uniform sampler2D tex;
+    uniform float isLightMode;
+    uniform vec3 bgColor;
+
+    void main() {
+      vec4 color = texture2D(tex, texelCoord);
+      float lum = dot(color.rgb, vec3(0.299, 0.587, 0.114));
+
+      if (isLightMode > 0.5) {
+        // Light mode: dark fluid on light background
+        float intensity = lum * 0.6;
+        gl_FragColor = vec4(bgColor - vec3(intensity), 1.0);
+      } else {
+        // Dark mode: light fluid on dark background
+        gl_FragColor = vec4(bgColor + vec3(lum * 0.8), 1.0);
+      }
+    }
+  </script>
+
+  <script type="x-shader/x-fragment" id="advectShader">
+    precision mediump float;
+    precision mediump sampler2D;
+    uniform sampler2D toAdvect;
+    uniform sampler2D inputVelocity;
+    uniform float timeStep;
+    uniform vec2 texelSize;
+    varying vec2 texelCoord;
+
+    vec4 bilerp(sampler2D sam, vec2 uv, vec2 tsize) {
+      vec4 s;
+      vec2 st = uv / tsize - 0.5;
+      s.xy = floor(st) + 0.5;
+      s.zw = s.xy + 1.0;
+      vec2 t = fract(st);
+      vec4 a = texture2D(sam, s.xy * tsize);
+      vec4 b = texture2D(sam, s.zy * tsize);
+      vec4 c = texture2D(sam, s.xw * tsize);
+      vec4 d = texture2D(sam, s.zw * tsize);
+      return mix(mix(a, b, t.x), mix(c, d, t.x), t.y);
+    }
+
+    void main() {
+      vec2 pos = texelCoord - timeStep * texture2D(inputVelocity, texelCoord).xy * texelSize;
+      gl_FragColor = bilerp(toAdvect, pos, texelSize);
+    }
+  </script>
+
+  <script type="x-shader/x-fragment" id="divergenceShader">
+    precision mediump float;
+    precision mediump sampler2D;
+    varying vec2 texelCoord;
+    varying highp vec2 left;
+    varying highp vec2 right;
+    varying highp vec2 top;
+    varying highp vec2 bottom;
+    uniform sampler2D inputVelocity;
+
+    void main() {
+      float L = texture2D(inputVelocity, left).x;
+      float R = texture2D(inputVelocity, right).x;
+      float T = texture2D(inputVelocity, top).y;
+      float B = texture2D(inputVelocity, bottom).y;
+      vec2 C = texture2D(inputVelocity, texelCoord).xy;
+      if (left.x < 0.0) L = -C.x;
+      if (right.x > 1.0) R = -C.x;
+      if (top.y > 1.0) T = -C.y;
+      if (bottom.y < 0.0) B = -C.y;
+      float div = 0.5 * (R - L + T - B);
+      gl_FragColor = vec4(div, 0.0, 0.0, 1.0);
+    }
+  </script>
+
+  <script type="x-shader/x-fragment" id="jacobiShader">
+    precision mediump float;
+    precision mediump sampler2D;
+    varying vec2 texelCoord;
+    varying vec2 left;
+    varying vec2 right;
+    varying vec2 top;
+    varying vec2 bottom;
+    uniform float alpha;
+    uniform float inverseBeta;
+    uniform sampler2D xTex;
+    uniform sampler2D bTex;
+
+    void main() {
+      float xL = texture2D(xTex, left).x;
+      float xR = texture2D(xTex, right).x;
+      float xT = texture2D(xTex, top).x;
+      float xB = texture2D(xTex, bottom).x;
+      float bC = texture2D(bTex, texelCoord).x;
+      gl_FragColor = vec4((xL + xR + xB + xT + alpha * bC) * inverseBeta, 0.0, 0.0, 1.0);
+    }
+  </script>
+
+  <script type="x-shader/x-fragment" id="gradientSubtractShader">
+    precision mediump float;
+    precision mediump sampler2D;
+    varying vec2 texelCoord;
+    varying vec2 left;
+    varying vec2 right;
+    varying vec2 top;
+    varying vec2 bottom;
+    uniform sampler2D velocity;
+    uniform sampler2D pressure;
+
+    void main() {
+      float pL = texture2D(pressure, left).x;
+      float pR = texture2D(pressure, right).x;
+      float pT = texture2D(pressure, top).x;
+      float pB = texture2D(pressure, bottom).x;
+      vec2 v = texture2D(velocity, texelCoord).xy;
+      v.xy -= vec2(pR - pL, pT - pB);
+      gl_FragColor = vec4(v, 0.0, 1.0);
+    }
+  </script>
+
+  <script type="x-shader/x-fragment" id="splatShader">
+    precision mediump float;
+    precision mediump sampler2D;
+    varying vec2 texelCoord;
+    uniform sampler2D tex;
+    uniform vec2 point;
+    uniform float radius;
+    uniform vec3 color;
+
+    void main() {
+      vec2 p = point.xy - texelCoord;
+      vec3 base = texture2D(tex, texelCoord).xyz;
+      vec3 splat = color * exp(-dot(p, p) / radius);
+      gl_FragColor = vec4(base + splat, 1.0);
+    }
+  </script>
+
+  <script type="x-shader/x-fragment" id="fadeShader">
+    precision mediump float;
+    precision mediump sampler2D;
+    varying vec2 texelCoord;
+    uniform sampler2D tex;
+
+    void main() {
+      vec4 color = texture2D(tex, texelCoord) * 0.995;
+      gl_FragColor = color;
+    }
+  </script>
+
+  <script src="js/fluid.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
